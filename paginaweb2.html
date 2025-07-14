@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>ProgramYourWorld</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+    /* Reset y base */
+    body {
+      background-color: #121212;
+      color: #ddd;
+      font-family: 'Fira Code', monospace, monospace;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    /* Contenedor principal */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Índice con estilo "tag" de código */
+    .indice {
+      background-color: #1e1e1e;
+      color: #61dafb;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #61dafb99;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      border: 2px solid #61dafb;
+      letter-spacing: 0.05em;
+      user-select: none;
+      margin-bottom: 40px;
+      font-family: 'Fira Code', monospace;
+    }
+
+    /* Títulos grandes */
+    h1, h2 {
+      color: #61dafb;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 15px;
+      user-select: none;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 40px;
+    }
+
+    /* Texto descriptivo */
+    .descripcion {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 700px;
+      margin: 10px auto 40px auto;
+      color: #ccc;
+      font-size: 1.1rem;
+      white-space: pre-line;
+      box-shadow: 0 0 10px #0008 inset;
+      line-height: 1.5;
+    }
+
+    /* Caja estilo código */
+    .codigo {
+      background: #1e1e1e;
+      border-radius: 8px;
+      padding: 25px;
+      max-width: 700px;
+      margin: 0 auto 60px auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.9);
+      color: #ccc;
+      font-size: 16px;
+      line-height: 1.5;
+      white-space: pre;
+      font-family: 'Fira Code', monospace;
+      user-select: text;
+    }
+
+    /* Syntax highlighting */
+    .comment { color: #6a9955; font-style: italic; }
+    .keyword { color: #569cd6; font-weight: bold; }
+    .function-name { color: #dcdcaa; }
+    .string { color: #d69d85; }
+    .operator, .punctuation { color: #d4d4d4; }
+    .variable { color: #9cdcfe; }
+
+    /* Botones con temática programación */
+    .btn-group {
+      text-align: center;
+      margin-bottom: 50px;
+      user-select: none;
+    }
+
+    button {
+      background-color: #333;
+      border: 2px solid transparent;
+      color: #61dafb;
+      padding: 12px 28px;
+      margin: 0 15px;
+      font-family: 'Fira Code', monospace;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 8px #000 inset;
+    }
+
+    button:hover {
+      background-color: #61dafb;
+      color: #121212;
+      border-color: #21a1f1;
+      box-shadow: 0 0 12px #21a1f1;
+    }
+
+    button.easy { border-color: #4CAF50; }
+    button.easy:hover { background-color: #4CAF50; color: #fff; box-shadow: 0 0 12px #4CAF50; }
+
+    button.medium { border-color: #ff9800; }
+    button.medium:hover { background-color: #ff9800; color: #fff; box-shadow: 0 0 12px #ff9800; }
+
+    button.hard { border-color: #f44336; }
+    button.hard:hover { background-color: #f44336; color: #fff; box-shadow: 0 0 12px #f44336; }
+
+    /* Contenedor texto dificultad */
+    #nivelDificultad {
+      background-color: #222;
+      color: #ccc;
+      border: 2px solid #444;
+      max-width: 600px;
+      margin: 0 auto 50px auto;
+      padding: 25px;
+      border-radius: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 1.1rem;
+      text-align: center;
+      min-height: 80px;
+      box-shadow: 0 0 12px #000 inset;
+      user-select: text;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="indice">&lt;? ¿Qué código elegir? ?&gt;</div>
+
+    <h1>Empecemos por lo básico</h1>
+    <h2>¿Qué es un lenguaje de programación?</h2>
+
+    <div class="descripcion">
+      Un lenguaje de programación es como un idioma que usan las computadoras para entender instrucciones. Gracias a él, los programadores pueden decirle a la máquina qué hacer, desde mostrar un mensaje en pantalla hasta crear videojuegos o aplicaciones.
+
+      Cada lenguaje tiene sus propias palabras y reglas, pero todos sirven para que las computadoras hagan tareas específicas. Algunos ejemplos famosos son Python, Java y JavaScript.
+
+      En pocas palabras, un lenguaje de programación es la herramienta que transforma nuestras ideas en acciones que una computadora puede realizar.
+    </div>
+
+    <div class="codigo">
+      <span class="comment">// Función para saludar</span><br>
+      <span class="keyword">function</span> <span class="function-name">saludar</span><span class="punctuation">(</span><span class="variable">nombre</span><span class="punctuation">)</span> <span class="punctuation">{</span><br>
+      &nbsp;&nbsp;<span class="keyword">return</span> <span class="string">`Hola, ${nombre}! Bienvenido.`</span><span class="punctuation">;</span><br>
+      <span class="punctuation">}</span><br><br>
+      <span class="keyword">const</span> <span class="variable">mensaje</span> <span class="operator">=</span> <span class="function-name">saludar</span><span class="punctuation">(</span><span class="string">'Mundo'</span><span class="punctuation">)</span><span class="punctuation">;</span><br>
+      <span class="keyword">console</span><span class="punctuation">.</span><span class="function-name">log</span><span class="punctuation">(</span><span class="variable">mensaje</span><span class="punctuation">)</span><span class="punctuation">;</span>
+    </div>
+
+    <h1>Dividiendo por dificultad</h1>
+    <p style="max-width:700px; margin: 0 auto 30px auto; text-align:center; color:#ccc; font-size:1.2rem;">
+      Con este concepto claro, debemos dividir este concepto en dificultad, ya que hay lenguajes de programación más complicados que otros.
+    </p>
+
+   <div class="btn-group">
+  <button class="easy" onclick="location.href='facil.html'">Fácil</button>
+  <button class="medium" onclick="location.href='media.html'">Media</button>
+  <button class="hard" onclick="location.href='dificil.html'">Difícil</button>
+</div>
+    <div id="nivelDificultad">Selecciona una dificultad para comenzar.</div>
+
+  </div>
+
+
+
+</body>
+</html>
